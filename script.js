@@ -28,18 +28,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // Part 2
   function changeBodyBgColor() {
     var body = document.querySelector('body');
-    body.style=("background-color: pink"); 
+    body.style=("background-color: pink"); // had to check my notes on this
   }
   //changeBodyBgColor();
 
   // Part 3
   function removeLastFavoriteThing() {
-    var favThings = document.querySelector("#favorite-things").children;
-    console.log(favThings);
-    var lastitem = favThings[favThings.length-1];
-    favThings.pop();
-    
-    console.log(favThings);
+    var favThings = document.querySelector("#favorite-things");
+    favThings.removeChild(favThings.children[5]);
   }
   removeLastFavoriteThing();
 
