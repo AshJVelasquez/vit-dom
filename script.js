@@ -20,21 +20,28 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Part 1
   function shortenPageTitle() {
-
+    var title = document.querySelector('#main-title');
+    title.textContent="Homepage of DOM";
   }
-
+  //shortenPageTitle();
 
   // Part 2
   function changeBodyBgColor() {
-
+    var body = document.querySelector('body');
+    body.style=("background-color: pink"); 
   }
-
+  //changeBodyBgColor();
 
   // Part 3
   function removeLastFavoriteThing() {
-
+    var favThings = document.querySelector("#favorite-things").children;
+    console.log(favThings);
+    var lastitem = favThings[favThings.length-1];
+    favThings.pop();
+    
+    console.log(favThings);
   }
-
+  removeLastFavoriteThing();
 
   // Part 4
   function makeSpecialTitlesBigger() {
